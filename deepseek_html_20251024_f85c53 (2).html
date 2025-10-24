@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoLab - Marketing Digital Maroc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #604569; --secondary: #3e1f47; --white: #ffffff; --light-bg: #f9f7fa; --text: #333333; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text); line-height: 1.6; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        h1, h2, h3 { margin-bottom: 20px; color: var(--secondary); }
+        h1 { font-size: 2.8rem; line-height: 1.2; text-align: center; }
+        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 50px; }
+        .btn { background: var(--primary); color: white; padding: 12px 30px; border-radius: 30px; text-decoration: none; display: inline-block; border: none; cursor: pointer; }
+        .btn:hover { background: var(--secondary); transform: translateY(-3px); }
+        .btn-whatsapp { background: #25D366; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-whatsapp:hover { background: #128C7E; }
+        
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { text-decoration: none; color: var(--text); font-weight: 500; }
+        nav ul li a:hover { color: var(--primary); }
+        
+        .hero { background: linear-gradient(135deg, rgba(96,69,105,0.1) 0%, rgba(62,31,71,0.1) 100%); padding: 180px 0 100px; text-align: center; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; color: #555; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .service-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        
+        .testimonials { background: var(--light-bg); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        .form-container { max-width: 600px; margin: 0 auto; background: var(--light-bg); padding: 40px; border-radius: 10px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .form-group textarea { height: 120px; resize: vertical; }
+        
+        .whatsapp-info { text-align: center; margin-top: 15px; padding: 15px; background: rgba(37,211,102,0.1); border-radius: 8px; border-left: 4px solid #25D366; }
+        
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
+        .contact-item { padding: 20px; }
+        .contact-icon { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
+        
+        footer { background: var(--secondary); color: white; padding: 40px 0; text-align: center; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            nav ul { display: none; }
+            .mobile-menu { display: block; font-size: 1.5rem; cursor: pointer; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">GoLab 🇲🇦</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <h1>Ton business mérite le meilleur marketing</h1>
+            <p>GoLab, agence de marketing digital 100% marocaine, accompagne les marques à grandir, se digitaliser et rayonner.</p>
+            <a href="#contact-form" class="btn">Réserve ton appel gratuit</a>
+            <p style="margin-top:15px;font-size:0.9rem;">Audit marketing offert 🎁</p>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Stratégie Marketing</h3>
+                    <p>Stratégies personnalisées pour maximiser votre croissance en ligne.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Publicité en ligne</h3>
+                    <p>Campagnes publicitaires ciblées pour générer des leads qualifiés.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hashtag"></i></div>
+                    <h3>Réseaux Sociaux</h3>
+                    <p>Création de contenu engageant pour renforcer votre présence.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Branding</h3>
+                    <p>Identité de marque forte qui vous différencie de la concurrence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>Témoignages Clients</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Avec GoLab, notre taux de réservation a considérablement augmenté. Une stratégie claire et des résultats concrets !"</p>
+                    <p><strong>- Zayane Homes</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Grâce à GoLab, ma page Instagram a explosé ! De 0 à 100K abonnés en quelques mois."</p>
+                    <p><strong>- Orchestre Rachid</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form" id="contact-form">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Nom complet</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Téléphone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Projet</label>
+                        <textarea id="project" required></textarea>
+                    </div>
+                    <button type="button" onclick="sendToWhatsApp()" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Envoyer via WhatsApp
+                    </button>
+                </form>
+                <div class="whatsapp-info">
+                    <i class="fab fa-whatsapp"></i>
+                    <strong>Comment ça marche ?</strong><br>
+                    Remplis le formulaire et WhatsApp s'ouvrira avec ton message !
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info" id="contact">
+        <div class="container">
+            <h2>Nos Coordonnées</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Téléphone</h3>
+                    <p>+212 698-542590</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>golab.team@outlook.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                    <h3>Instagram</h3>
+                    <p>@golab.team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 GoLab – Agence de marketing digital 100% marocaine</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const project = document.getElementById('project').value;
+            
+            if (!name || !phone || !project) {
+                alert('Veuillez remplir tous les champs');
+                return;
+            }
+            
+            const message = `🚀 NOUVEAU LEAD GOLAB 🚀\n\n👤 Nom: ${name}\n📞 Téléphone: ${phone}\n📝 Projet: ${project}\n\n⏰ Date: ${new Date().toLocaleString('fr-FR')}`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/212698542590?text=${encodedMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+            document.getElementById('contactForm').reset();
+            alert('✅ Redirection vers WhatsApp...');
+        }
+
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
